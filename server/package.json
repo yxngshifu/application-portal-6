@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch --env-file-if-exists=../.env src/index.js",
+    "start": "node --env-file-if-exists=../.env src/index.js",
+    "test": "node --env-file-if-exists=../.env scripts/e2e.js"
+  },
+  "dependencies": {
+    "@xmldom/xmldom": "^0.8.10",
+    "exceljs": "^4.4.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^7.4.0",
+    "googleapis": "^144.0.0",
+    "jszip": "^3.10.1",
+    "multer": "^2.0.2"
+  }
+}
