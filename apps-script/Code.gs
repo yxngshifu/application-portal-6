@@ -22,7 +22,9 @@
 const SHEET_ID         = '1tiEGZFb0Ktqavsjh4RnAL0ckQJ8KTLNfB4Udsxd0ZvQ';
 const PARENT_FOLDER_ID = '1-icJGxnOqVK9oLaKpDFRtx4HlaEvHP73';
 const SHEET_NAME       = 'Applications';
-const SECRET           = '546d9dfac962acf862732e468ca72a603729c27d40d941f1';   // must equal APPS_SCRIPT_SECRET in the server's .env
+const SECRET           = const SECRET =
+  PropertiesService.getScriptProperties()
+    .getProperty('APPS_SCRIPT_SECRET') || '';   // must equal APPS_SCRIPT_SECRET in the server's .env
 
 const ID_RE          = /^APP-[A-HJ-NP-Z2-9]{4}-[A-HJ-NP-Z2-9]{4}$/;   // must match server/src/util.js
 const MAX_FILE_BYTES = 16 * 1024 * 1024;                              // server limit is 15 MB per file
